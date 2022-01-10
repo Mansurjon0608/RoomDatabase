@@ -16,7 +16,7 @@ class InfoActivity2 : AppCompatActivity() {
         binding = ActivityInfo2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar.hide()
+        supportActionBar?.hide()
 
         binding.btnBack.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)

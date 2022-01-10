@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TZ</string>
+    <string name="name">Name</string>
+    <string name="number">Number</string>
+    <string name="time">Time</string>
+    <string name="imsoft_group">IMSOFT Group!</string>
+    <string name="e_mail">E-mail</string>
+    <string name="info">Info</string>
+    <string name="back"><![CDATA[< Back]]></string>
+    <string name="save">Save</string>
+</resources>

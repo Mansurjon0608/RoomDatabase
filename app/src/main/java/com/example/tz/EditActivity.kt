@@ -50,6 +50,7 @@ class EditActivity : AppCompatActivity() {
         binding.btnSave.setOnClickListener {
 
 
+
             contact.name = binding.txtName.text.toString().trim()
             contact.number = binding.txtNumber.text.toString().trim()
             contact.mail = binding.txtMail.text.toString().trim()
@@ -57,12 +58,18 @@ class EditActivity : AppCompatActivity() {
             contact.imagePath = absolutePath
             contact.time = SimpleDateFormat("HH:mm").format(Date())
 
-            appDatabase.contactDao().editContact(contact)
+            if(contact.name!="" && contact.number != "" && contact.mail!="" && contact.info!="" && absolutePath!="") {
 
-            Toast.makeText(this, "${binding.txtName.text} is changed", Toast.LENGTH_SHORT).show()
+                appDatabase.contactDao().editContact(contact)
 
-            var intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+                Toast.makeText(this, "${binding.txtName.text} is changed", Toast.LENGTH_SHORT)
+                    .show()
+
+                var intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "Ma'lumot yetarli emas...", Toast.LENGTH_SHORT).show()
+            }
 
         }
 

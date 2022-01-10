@@ -39,12 +39,16 @@ class AddActivity : AppCompatActivity() {
             contact.info = binding.txtInfo.text.toString()
             contact.imagePath = absolutePath
 
+            if(contact.name!="" && contact.number != "" && contact.mail!="" && contact.info!="" && absolutePath!="") {
+
             appDatabase.contactDao().addContact(contact)
             Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show()
 
             var intent = Intent(this, MainActivity::class.java)
             intent.putExtra("contact", contact)
-            startActivity(intent)
+            startActivity(intent)}else{
+                Toast.makeText(this, "Ma'lumot yetarli emas...", Toast.LENGTH_SHORT).show()
+            }
 
         }
 

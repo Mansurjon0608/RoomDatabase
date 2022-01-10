@@ -8,16 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.core.os.bundleOf
-import androidx.recyclerview.widget.RecyclerView
 import com.example.tz.databinding.ActivityMainBinding
 import dao.AppDatabase
 import dao.Contact
-import helper.MyButton
-import helper.MyButtonClickListener
-import helper.MySwipeHelper
 import kotlinx.android.synthetic.main.activity_main.*
-import utils.Constants
 import utils.MyObject
 
 class MainActivity : AppCompatActivity() {
@@ -122,6 +116,12 @@ class MainActivity : AppCompatActivity() {
                 alertDialog.show()
 
 
+            }
+
+            override fun onClick(contact: Contact, position: Int) {
+                val intent = Intent(this@MainActivity, InfoActivity2::class.java)
+                intent.putExtra("contact", contact)
+                startActivity(intent)
             }
 
         })

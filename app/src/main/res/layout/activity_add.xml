@@ -21,17 +21,20 @@
             android:layout_height="180dp"
             android:layout_gravity="center"
             android:clickable="true"
-            android:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/ic_baseline_person_24" />
 
         <EditText
             android:id="@+id/txt_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:paddingStart="10dp"
             android:hint="@string/name"
             android:inputType="textCapWords"
             android:textSize="20sp"
-            android:textStyle="italic" />
+            android:textStyle="italic"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            />
 
         <EditText
             android:id="@+id/txt_number"
@@ -41,7 +44,9 @@
             android:hint="@string/number"
             android:inputType="phone"
             android:textSize="20sp"
-            android:textStyle="italic" />
+            android:textStyle="italic"
+            android:drawableStart="@drawable/ic_baseline_local_phone_24"
+            android:paddingStart="10dp"/>
 
         <EditText
             android:id="@+id/txt_mail"
@@ -51,7 +56,9 @@
             android:hint="@string/e_mail"
             android:inputType="textEmailAddress"
             android:textSize="20sp"
-            android:textStyle="italic" />
+            android:textStyle="italic"
+            android:drawableStart="@drawable/ic_baseline_alternate_email_24"
+            />
 
         <EditText
             android:id="@+id/txt_info"
@@ -61,7 +68,9 @@
             android:hint="@string/info"
             android:inputType="textCapWords"
             android:textSize="20sp"
-            android:textStyle="italic" />
+            android:textStyle="italic"
+
+            />
 
     </LinearLayout>
 

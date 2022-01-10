@@ -21,6 +21,9 @@ class RvAdapter(val list: ArrayList<Contact>, val context: Context, var rvItemCl
 
             itemRv.profileImage.setImageURI((Uri.parse(contact.imagePath)))
 
+            itemRv.root.setOnClickListener {
+                rvItemClick.onClick(contact, position)
+            }
 
             itemRv.btnDelete.setOnClickListener {
                 rvItemClick.delete(contact, position)
@@ -47,6 +50,7 @@ class RvAdapter(val list: ArrayList<Contact>, val context: Context, var rvItemCl
 interface RvItemClick {
     fun edit(contact: Contact, position: Int)
     fun delete(contact: Contact, position: Int)
+    fun onClick(contact: Contact, position: Int)
 
 }
 

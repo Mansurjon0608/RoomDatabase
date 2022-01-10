@@ -26,7 +26,7 @@ class InfoActivity2 : AppCompatActivity() {
 
         contact = intent.getSerializableExtra("contact") as Contact
 
-        binding.txtInfo.text = contact.name
+        binding.txtName.text = contact.name
         binding.txtNumber.text = contact.number
         binding.txtMail.text = contact.mail
         binding.txtInfo.text = contact.info
